@@ -159,6 +159,51 @@ namespace RadioactivityMonitor.Tests
 
         }
 
+
+        /*
+        * 
+        *  Alarm will ring every time alarm threshold hits
+        */
+        [Test]
+        public void AlarmActivatesOnEveryAlarmThresholdHit()
+        {
+            //Alarm hits threshold
+            var sensor = new TestSensor(22);
+            var alarm = new Alarm(sensor, 2, _alarmSettings);
+            alarm.Check();
+            Assert.That(alarm.AlarmOn, Is.False);
+
+            sensor.SetNextMeasure(18);
+            alarm.Check();
+            Assert.That(alarm.AlarmOn, Is.False);
+
+            sensor.SetNextMeasure(24);
+            alarm.Check();
+            Assert.That(alarm.AlarmOn, Is.True);
+            Assert.That(alarm.AlarmCount, Is.EqualTo(2));
+
+
+            // Alarm count is reset after the alarm has been activated previously but this current value is within threshold
+            sensor.SetNextMeasure(18);
+            alarm.Check();
+            Assert.That(alarm.AlarmOn, Is.False);
+            Assert.That(alarm.AlarmCount, Is.EqualTo(0));
+
+
+            //Alarm Count hits threshold again, therefore the alarm activates
+            sensor.SetNextMeasure(22);
+            alarm.Check();
+            Assert.That(alarm.AlarmOn, Is.False);
+
+            sensor.SetNextMeasure(18);
+            alarm.Check();
+            Assert.That(alarm.AlarmOn, Is.False);
+
+            sensor.SetNextMeasure(24);
+            alarm.Check();
+            Assert.That(alarm.AlarmOn, Is.True);
+            Assert.That(alarm.AlarmCount, Is.EqualTo(2));
+        }
     }
 }
 

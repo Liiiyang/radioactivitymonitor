@@ -46,6 +46,12 @@ namespace RadioactivityMonitor.Domain.Entities
             }
             else
             {
+                if(_alarmOn)
+                {
+                    //Reset Alarm Threshold only when the alarm threshold had been hit previously
+                    _alarmCount = 0;
+                }
+
                 _alarmOn = false;
             }
         }
