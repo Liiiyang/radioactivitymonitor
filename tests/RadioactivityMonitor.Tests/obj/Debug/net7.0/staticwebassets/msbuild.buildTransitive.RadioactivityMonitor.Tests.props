@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/RadioactivityMonitor.Tests.props" />
+</Project>

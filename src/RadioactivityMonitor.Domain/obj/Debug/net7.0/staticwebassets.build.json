@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6UEW9GPIaFf2nD21GzMqFGwcUBoCsPO9TdZptiHp50g=",
+  "Source": "RadioactivityMonitor.Domain",
+  "BasePath": "_content/RadioactivityMonitor.Domain",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

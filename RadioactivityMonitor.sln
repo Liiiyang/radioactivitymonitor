@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70681BFB-28B3-4790-A74A-52203FE57EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioactivityMonitor.Domain", "src\RadioactivityMonitor.Domain\RadioactivityMonitor.Domain.csproj", "{30AF91FB-2C15-41CF-929F-08D619AB7F4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CBFD0786-01EA-4F00-89A3-ABE98857C19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioactivityMonitor.Tests", "tests\RadioactivityMonitor.Tests\RadioactivityMonitor.Tests.csproj", "{9EA4C349-43EE-4048-8CC1-C9CE7F960699}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30AF91FB-2C15-41CF-929F-08D619AB7F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30AF91FB-2C15-41CF-929F-08D619AB7F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30AF91FB-2C15-41CF-929F-08D619AB7F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30AF91FB-2C15-41CF-929F-08D619AB7F4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA4C349-43EE-4048-8CC1-C9CE7F960699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA4C349-43EE-4048-8CC1-C9CE7F960699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA4C349-43EE-4048-8CC1-C9CE7F960699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA4C349-43EE-4048-8CC1-C9CE7F960699}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05CFF184-67D0-40EF-A03A-4447076875A1}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30AF91FB-2C15-41CF-929F-08D619AB7F4B} = {70681BFB-28B3-4790-A74A-52203FE57EFD}
+		{9EA4C349-43EE-4048-8CC1-C9CE7F960699} = {CBFD0786-01EA-4F00-89A3-ABE98857C19F}
+	EndGlobalSection
+EndGlobal
